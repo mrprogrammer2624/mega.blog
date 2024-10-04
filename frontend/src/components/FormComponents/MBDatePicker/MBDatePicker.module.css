@@ -1,14 +1,13 @@
-.label {
-  composes: label from "../HMInput/HMInput.module.css";
+.label {  composes: label from "../MBInput/MBInput.module.css";
 }
 
 .datepicker {
-  composes: inputWrap from "../HMInput/HMInput.module.css";
+  composes: inputWrap from "../MBInput/MBInput.module.css";
   width: 100%;
 }
 
 .suffixIcon {
-  composes: passwordIcon from "../HMInput/HMInput.module.css";
+  composes: passwordIcon from "../MBInput/MBInput.module.css";
 }
 
 .datepicker :global .ant-picker-clear {
@@ -25,12 +24,12 @@
 
 @media (max-width: 1699px) {
   .datepicker {
-    composes: inputWrap from "../HMInput/HMInput.module.css";
+    composes: inputWrap from "../MBInput/MBInput.module.css";
   }
 }
 
 @media (max-width: 767px) {
   .datepicker {
-    composes: inputWrap from "../HMInput/HMInput.module.css";
+    composes: inputWrap from "../MBInput/MBInput.module.css";
   }
 }

@@ -1,9 +1,8 @@
-import { Select } from "antd";
-import { Icons } from "../../../constants";
+import { Select } from "antd";import { Icons } from "../../../constants";
 import clsx from "clsx";
-import styles from "./HMSelect.module.css";
+import styles from "./MBSelect.module.css";
 
-export const HMSelect = ({
+export const MBSelect = ({
   id,
   name,
   size,
@@ -61,9 +60,7 @@ export const HMSelect = ({
         mode={mode}
         allowClear={
           allowClear && {
-            clearIcon: (
-              <div className={styles.clearIcon}> {Icons.CloseCircle} </div>
-            ),
+            clearIcon: <div className={styles.clearIcon}> {Icons.CloseCircle} </div>,
           }
         }
         popupClassName={styles.selectPopup}
@@ -71,9 +68,7 @@ export const HMSelect = ({
         disabled={disabled}
         {...rest}
       />
-      {errorMessage && (
-        <div className={styles.errorMessage}>{errorMessage}</div>
-      )}
+      {errorMessage && <div className={styles.errorMessage}>{errorMessage}</div>}
     </div>
   );
 };

@@ -1,44 +1,98 @@
-import { Avatar, Dropdown, Layout } from "antd";
-import { useTitle } from "../../App";
+import { HeaderLink, Icons } from "@/constants";
+import { Container, MBInput } from "@/components";
+import { Link, useLocation } from "react-router-dom";
 import clsx from "clsx";
-import { Icons } from "@/constants";
-import { useNavigate } from "react-router-dom";
-import { MBButton, HMInput } from "@/components/";
 import styles from "./MBHeader.module.css";
 
-const { Header } = Layout;
-
 export const MBHeader = () => {
-  const navigate = useNavigate();
-  const { headerText } = useTitle();
+  let location = useLocation();
+
+  // const headerMenuLinks = [
+  //   {
+  //     key: 1,
+  //     data: "Profile",
+  //     link: "/profile",
+  //     icons: Icons.userIcon,
+  //   },
+  //   {
+  //     key: 2,
+  //     data: "Logout",
+  //     link: "/",
+  //     icons: Icons.ExitIcons,
+  //     // handleClickMenu: async () => {
+  //     //   try {
+  //     //     await axios.get("");
+  //     //     router.push("/authentication");
+  //     //   } catch (error) {
+  //     //     console.log(error.message);
+  //     //   }
+  //     // },
+  //   },
+  // ];
+
   return (
-    <Header className={clsx(styles.header, "d-flex align-items-center justify-content-between")}>
-      <div className="d-flex align-items-center justify-content-center gap-xl">
-        <MBButton
-          // icon={collapsed ? Icons.NotificationBall : Icons.AllEmployees}
-          className={"d-md-none"}
-        />
-        <h1 className="clr-dark fw-semibold">{headerText}</h1>
-      </div>
-      <div className="d-flex align-items-center justify-content-center gap-xl">
-        <HMInput placeholder={"Search"} prefix={Icons.Search} />
-        <MBButton icon={Icons.NotificationBall} onClick={() => navigate("/notifications")} />
-        {/* <HMDropdown items={menuItems}>children</HMDropdown> */}
-        <Dropdown
-          overlayStyle={{
-            background: "#1f1f1f",
-            borderRadius: "8px",
-          }}
+    <header className="py-5">
+      <Container>
+        <div
+          className={clsx(styles.headerWrapper, "d-grid align-items-center")}
         >
-          <a onClick={(e) => e.preventDefault()} className="d-flex align-items-center justify-content-start gap-xs">
-            <Avatar src="A" alt="Lucifer" />
-            <div className="d-flex flex-column">
-              <span className="font-semibold p d-block lh-base clr-white">Lucifer</span>
-              <span className="text-xs text-gray-400 p d-block lh-base clr-gray">HR Manager</span>
+          <div className={clsx(styles.headerLeft, "d-flex align-items-center")}>
+            <Link to="/" className="h2 fw-semibold">
+              MEGA.news
+            </Link>
+            <ul
+              className={clsx(
+                styles.headerLeftListing,
+                "d-flex list-style-none"
+              )}
+            >
+              {HeaderLink.map((content, index) => {
+                let removedSpacesText = content.link
+                  .split(" ")
+                  .join("")
+                  .toLowerCase();
+                const isActive =
+                  removedSpacesText === location.pathname.toLowerCase();
+                return (
+                  <li key={index}>
+                    <Link
+                      to={content.link}
+                      className={clsx(
+                        styles.headerLink,
+                        isActive ? styles.active : ""
+                      )}
+                    >
+                      {content.title}
+                      {content.children && (
+                        <span className="ms-1">{Icons.arrowIcon}</span>
+                      )}
+                    </Link>
+                    {content.children}
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+          <div className="d-flex justify-content-end align-items-center flex-wrap gap-3 w-100">
+            <div className="w-100" style={{ maxWidth: "30rem" }}>
+              <MBInput
+                parentClassName="w-100"
+                type="search"
+                placeholder="Search anything"
+              />
             </div>
-          </a>
-        </Dropdown>
-      </div>
-    </Header>
+            {/* <MBDropdown
+              dropdownMenuClassName="d-flex align-items-center justify-start headerDropdownMenu"
+              menuLinks={headerMenuLinks}
+            >
+              <div className="rounded-3 overflow-hidden" style={{ maxWidth: '50px' }}>
+                <img src={avatar1} width="100%" height="100%" alt="avatar1" />
+              </div>
+              <div>Behzad</div>
+            </MBDropdown> */}
+          </div>
+        </div>
+      </Container>
+    </header>
   );
 };

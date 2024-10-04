@@ -1,9 +1,10 @@
-import { Modal } from "antd";import { clsx } from "clsx";
+import { Modal } from "antd";
+import { clsx } from "clsx";
 import { Icons } from "@/constants";
 import { MBButton } from "@/components";
-import styles from "./HMModal.module.css";
+import styles from "./MBModal.module.css";
 
-export const HMModal = ({
+export const MBModal = ({
   open,
   title,
   width,

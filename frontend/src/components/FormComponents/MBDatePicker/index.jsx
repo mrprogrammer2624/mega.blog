@@ -1,8 +1,7 @@
-import { DatePicker } from "antd";
-import clsx from "clsx";
-import styles from "./HMDatePicker.module.css";
+import { DatePicker } from "antd";import clsx from "clsx";
+import styles from "./MBDatePicker.module.css";
 
-export const HMDatePicker = ({
+export const MBDatePicker = ({
   id,
   value,
   label,
@@ -35,9 +34,7 @@ export const HMDatePicker = ({
         status={isInvalid && "error"}
         {...rest}
       />
-      {errorMessage && (
-        <div className={clsx(styles.errorMessage)}>{errorMessage}</div>
-      )}
+      {errorMessage && <div className={clsx(styles.errorMessage)}>{errorMessage}</div>}
     </div>
   );
 };

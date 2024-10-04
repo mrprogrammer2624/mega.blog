@@ -1,8 +1,7 @@
-import { Switch } from "antd";
-import clsx from "clsx";
-import styles from "./HMSwitch.module.css";
+import { Switch } from "antd";import clsx from "clsx";
+import styles from "./MBSwitch.module.css";
 
-export const HMSwitch = ({
+export const MBSwitch = ({
   wrapperClassName,
   checked,
   className,

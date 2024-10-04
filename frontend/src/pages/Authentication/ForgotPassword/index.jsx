@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";import clsx from "clsx";
+import { Link } from "react-router-dom";
+import clsx from "clsx";
 import { Icons } from "@/constants";
-import { MBButton, HMInput } from "@/components";
+import { MBButton, MBInput } from "@/components";
 import styles from "../Authentication.module.css";
 
 export const ForgotPassword = () => {
@@ -16,7 +17,7 @@ export const ForgotPassword = () => {
         </p>
       </div>
       <form action="" className={styles.FromWrapper}>
-        <HMInput label={"Email Address"} placeholder={"Enter Your Email"} />
+        <MBInput label={"Email Address"} placeholder={"Enter Your Email"} />
         <MBButton variant={"primary"} block>
           Send OTP
         </MBButton>

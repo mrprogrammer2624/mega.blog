@@ -5,6 +5,13 @@ import path from "node:path";
 export default defineConfig({
   plugins: [react()],
   base: "/",
+  server: {
+    proxy: {
+      "/api": {
+        target: "http://localhost:3000",
+      },
+    },
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

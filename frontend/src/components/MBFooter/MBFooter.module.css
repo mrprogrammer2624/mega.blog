@@ -1,0 +1,84 @@
+.footerWrapper {
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-2xl);
+}
+
+.footerWrapperFirst {
+  grid-column: span 2;
+  padding: calc(var(--space-xl) * 2) calc(var(--space-xl) * 2)
+    calc(var(--space-xl) * 2) 0;
+  border-radius: 5rem;
+}
+
+.footerWrapperSecond,
+.footerWrapperLast {
+  padding: calc(var(--space-xl) * 2) 0;
+}
+
+.copyright {
+  grid-template-columns: repeat(2, 1fr);
+  background: #3e32320d;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+.footerWrapperFirstTop {
+  row-gap: calc(var(--space-lg) * 2);
+  column-gap: 11.2rem;
+  grid-template-columns: 2.22fr 1fr;
+}
+
+.FooterExtraContainer {
+  margin: calc(var(--space-xl) * 2) 0;
+}
+
+.FooterExtraContainer::before {
+  content: "";
+  position: absolute;
+  width: 40%;
+  background-color: var(--clr-gray);
+  top: 0;
+  right: 100%;
+  transform: translateX(50%);
+  height: 100%;
+}
+
+.footerWrapperSecondContent {
+  row-gap: var(--space-xl);
+}
+
+.footerInstagramGrid {
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2xl);
+}
+
+.footerInstagramWrapper {
+  padding-bottom: 100%;
+}
+
+.btnInstagram {
+  background: linear-gradient(262.85deg, #f45c9f 5.57%, #ff7563 73.65%);
+  color: var(--clr-white);
+}
+
+.btnInstagram:hover {
+  background: linear-gradient(
+    262.85deg,
+    #d94b82 5.57%,
+    #ff5a3e 73.65%
+  ) !important;
+}
+
+.btnTwitter {
+  background: linear-gradient(227.96deg, #2ca5e0 11.38%, #67c9f5 84.07%);
+  color: var(--clr-white);
+}
+
+.btnTwitter:hover {
+  background: linear-gradient(
+    227.96deg,
+    #2199c8 11.38%,
+    #5bb8e5 84.07%
+  ) !important;
+}

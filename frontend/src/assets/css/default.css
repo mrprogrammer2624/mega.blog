@@ -11,8 +11,8 @@ html {
 
 body {
   font-size: var(--text-xl);
-  color: var(--clr-white);
-  background-color: var(--clr-black);
+  color: var(--clr-black);
+  background-color: var(--clr-white);
   line-height: 1.5;
 }
 
@@ -28,40 +28,44 @@ button:disabled {
 /* Font Family */
 
 /* Sizes */
-
 h1,
 .h1 {
-  font-size: var(--text-5xl);
+  font-size: var(--text-6xl);
 }
 
 h2,
 .h2 {
-  font-size: var(--text-4xl);
+  font-size: var(--text-5xl);
 }
 
 h3,
 .h3 {
-  font-size: var(--text-3xl);
+  font-size: var(--text-4xl);
 }
 
 h4,
 .h4 {
-  font-size: var(--text-2xl);
+  font-size: var(--text-3xl);
 }
 
 h5,
 .h5 {
-  font-size: var(--text-lg);
+  font-size: var(--text-2xl);
 }
 
 h6,
 .h6 {
-  font-size: var(--text-sm);
+  font-size: var(--text-xl);
 }
 
 p,
 .p {
-  font-size: var(--text-xl);
+  font-size: var(--text-lg);
+}
+
+p-sm,
+.p-sm {
+  font-size: var(--text-sm);
 }
 /* Sizes End */
 
@@ -105,6 +109,10 @@ p,
   background-color: var(--clr-white);
 }
 
+.bg-gray {
+  background-color: var(--clr-gray);
+}
+
 .bg-success {
   background-color: var(--clr-success);
 }
@@ -119,33 +127,9 @@ p,
 
 /* Background Colors End */
 
-/* Common Grid Template Columns Class Start */
-.grid-columns {
-  grid-template-columns: repeat(var(--grid-columns, 2), 1fr);
-}
-/* Common Grid Template Columns Class End */
-
-/* Common Grid Gap Class Start */
-.gap-2xl {
-  grid-gap: var(--space-2xl);
-}
-
-.gap-xl {
-  grid-gap: var(--space-xl);
-}
-
-.gap-xs {
-  grid-gap: var(--space-xs);
-}
-/* Common Grid Gap Class End */
-
 /* Utilities */
 .cursor-pointer {
   cursor: pointer;
-}
-
-.rounded-pill {
-  border-radius: 9999px;
 }
 
 .list-style-none {
@@ -185,28 +169,23 @@ img {
 /* Page CSS */
 
 /* Defult Card Design */
-.card {
-  border: 1px solid rgba(var(--clr-gray-rgb), 0.2);
-  border-radius: var(--space-md);
-  padding: var(--space-xl);
-}
-
-.border {
-  border-style: solid;
-}
-
-.border-2 {
-  border-width: 2px;
-}
-
-.border-primary {
-  border-color: var(--clr-primary);
-}
-
-.styleguide-card {
-  gap: var(--space-2xl);
-}
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+.rounded-xl {
+  border-radius: var(--space-md);
+}
+
+.justify-self-end {
+  justify-self: end;
+}
+
+.text-justify {
+  text-align: justify;
 }

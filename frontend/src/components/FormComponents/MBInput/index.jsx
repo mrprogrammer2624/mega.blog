@@ -1,8 +1,7 @@
-import { Input } from "antd";
-import clsx from "clsx";
-import styles from "./HMInput.module.css";
+import { Input } from "antd";import clsx from "clsx";
+import styles from "./MBInput.module.css";
 
-export const HMInput = ({
+export const MBInput = ({
   id,
   name,
   size,
@@ -25,10 +24,7 @@ export const HMInput = ({
   return (
     <div className={clsx(parentClassName, "position-relative")}>
       {label && (
-        <label
-          htmlFor={id}
-          className={clsx(styles.label, labelClassName, "position-absolute")}
-        >
+        <label htmlFor={id} className={clsx(styles.label, labelClassName, "position-absolute")}>
           {label}
         </label>
       )}
@@ -48,9 +44,7 @@ export const HMInput = ({
         allowClear={allowClear}
         {...rest}
       />
-      {errorMessage && (
-        <div className={clsx(styles.errorMessage)}>{errorMessage}</div>
-      )}
+      {errorMessage && <div className={clsx(styles.errorMessage)}>{errorMessage}</div>}
     </div>
   );
 };
@@ -79,10 +73,7 @@ export const HMPasswordInput = ({
   return (
     <div className={clsx(parentClassName, "position-relative")}>
       {label && (
-        <label
-          htmlFor={id}
-          className={clsx(styles.label, labelClassName, "position-absolute")}
-        >
+        <label htmlFor={id} className={clsx(styles.label, labelClassName, "position-absolute")}>
           {label}
         </label>
       )}
@@ -100,14 +91,12 @@ export const HMPasswordInput = ({
         suffix={suffix}
         {...rest}
       />
-      {errorMessage && (
-        <div className={clsx(styles.errorMessage)}>{errorMessage}</div>
-      )}
+      {errorMessage && <div className={clsx(styles.errorMessage)}>{errorMessage}</div>}
     </div>
   );
 };
 
-export const HMInputOtp = ({
+export const MBInputOtp = ({
   id,
   size,
   value,
@@ -137,9 +126,7 @@ export const HMInputOtp = ({
         mask={mask}
         {...rest}
       />
-      {errorMessage && (
-        <div className={clsx(styles.errorMessage)}>{errorMessage}</div>
-      )}
+      {errorMessage && <div className={clsx(styles.errorMessage)}>{errorMessage}</div>}
     </div>
   );
 };

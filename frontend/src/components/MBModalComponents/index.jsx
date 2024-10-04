@@ -1,2 +1,2 @@
-export { HMModal } from "./Modal/";
-export { HMSuccessModal } from "./SuccessModal/";
+export { MBModal } from "./Modal/";
+export { MBSuccessModal } from "./SuccessModal/";

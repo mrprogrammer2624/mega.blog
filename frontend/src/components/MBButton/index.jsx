@@ -1,7 +1,20 @@
-import { Button } from "antd";import clsx from "clsx";
+import { Button } from "antd";
+import clsx from "clsx";
 import styles from "./MBButton.module.css";
 
-export const MBButton = ({ size, type, icon, className, children, onClick, id, name, variant, shape, ...rest }) => {
+export const MBButton = ({
+  size,
+  type,
+  icon,
+  className,
+  children,
+  onClick,
+  id,
+  name,
+  variant,
+  shape,
+  ...rest
+}) => {
   return (
     <Button
       id={id}

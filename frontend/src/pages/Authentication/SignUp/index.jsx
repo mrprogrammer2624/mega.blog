@@ -1,5 +1,4 @@
-import { MBButton, MBCheckbox, HMInput, HMPasswordInput } from "@/components";
-import { Link } from "react-router-dom";
+import { MBButton, MBCheckbox, MBInput, HMPasswordInput } from "@/components";import { Link } from "react-router-dom";
 import clsx from "clsx";
 import SignupHook from "@/hooks/User/signupUser.hook";
 import styles from "../Authentication.module.css";
@@ -17,7 +16,7 @@ export const SignUp = () => {
 
         <form onSubmit={handleSubmit} className={styles.FromWrapper}>
           <div className={styles.FormInputWrapper}>
-            <HMInput
+            <MBInput
               label={"Name"}
               placeholder={"Enter Your Name"}
               name="name"
@@ -25,7 +24,7 @@ export const SignUp = () => {
               onChange={handleInputChange}
               errorMessage={errors}
             />
-            <HMInput
+            <MBInput
               label={"Email Address"}
               placeholder={"Enter Your Email"}
               name="email"

@@ -1,19 +1,19 @@
 import { Outlet } from "react-router-dom";
 import { Layout } from "antd";
-import { MBHeader } from "@/components";
+import { MBFooter, MBHeader } from "@/components";
 import clsx from "clsx";
-import styles from "./DashboardLayout.module.css";
+import styles from "./MainLayout.module.css";
 
 const { Content } = Layout;
 
 export const MainLayout = () => {
   return (
-    <Layout className={styles.main}>
+    <Layout>
       <MBHeader />
-      <Content className={clsx(styles.content, "card")}>
+      <Content className={clsx(styles.content)}>
         <Outlet />
       </Content>
-      footer
+      <MBFooter />
     </Layout>
   );
 };

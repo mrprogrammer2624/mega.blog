@@ -1,9 +1,0 @@
-.main {
-  height: 100vh;
-  padding: var(--space-xl);
-}
-
-.content {
-  overflow: auto;
-  margin: 3rem 10px 0 3rem;
-}

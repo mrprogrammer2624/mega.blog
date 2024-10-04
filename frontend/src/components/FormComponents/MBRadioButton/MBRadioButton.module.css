@@ -1,6 +1,5 @@
-.errorMessage,
-.label {
-  composes: label from "../HMInput/HMInput.module.css";
+.errorMessage,.label {
+  composes: label from "../MBInput/MBInput.module.css";
 }
 
 .radioButton {

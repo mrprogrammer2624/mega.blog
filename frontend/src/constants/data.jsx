@@ -25,35 +25,21 @@ import {
   whiteCar,
 } from "@/assets/img";
 import { RatioImages } from "@/components/RatioImages";
-import { Icons } from "@/utility/Icons";
+import { Icons } from "./icons";
 
 export const HeaderLink = [
   {
     key: 1,
-    title: "Categories",
-    // children: (
-    //   <CategoriesSubMenu className="group-hover:visible group-hover:opacity-100" />
-    // ),
-    link: "/categories",
-  },
-  {
-    key: 2,
-    title: "Pages",
-    // children:,
-    link: "*",
-  },
-  {
-    key: 3,
     title: "contact us",
     link: "/contactus",
   },
   {
-    key: 4,
+    key: 2,
     title: "about us",
     link: "/aboutus",
   },
   {
-    key: 4,
+    key: 3,
     title: "Blog Upload",
     link: "/blog-upload",
   },
@@ -561,7 +547,7 @@ export const authenticationButton = [
     id: 2,
     content: "Continue with Twitter",
     variant: "secondary",
-    icons: Icons.twitterColorLogo,
+    icons: Icons.twitter,
   },
   {
     id: 3,

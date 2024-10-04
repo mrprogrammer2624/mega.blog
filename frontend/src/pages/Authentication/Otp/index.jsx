@@ -1,6 +1,7 @@
-import { Link } from "react-router-dom";import clsx from "clsx";
+import { Link } from "react-router-dom";
+import clsx from "clsx";
 import { Icons } from "@/constants";
-import { MBButton, HMInputOtp } from "@/components";
+import { MBButton, MBInputOtp } from "@/components";
 import styles from "../Authentication.module.css";
 
 export const Otp = () => {
@@ -16,7 +17,7 @@ export const Otp = () => {
         </p>
       </div>
       <form action="" className={styles.FromWrapper}>
-        <HMInputOtp length={6} size={"large"} />
+        <MBInputOtp length={6} size={"large"} />
         <MBButton variant={"primary"} block>
           Verify
         </MBButton>

@@ -9,3 +9,7 @@
 .Button:global.ant-btn-sm {
   min-height: unset;
 }
+
+.Button:global.ant-btn > span {
+  display: flex;
+}

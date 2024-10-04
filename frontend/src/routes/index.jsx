@@ -1,11 +1,11 @@
-import { createBrowserRouter } from "react-router-dom"; /* Layouts Loading */import { AuthLayout } from "@/layouts";
+import { createBrowserRouter } from "react-router-dom";
+import { AuthLayout, MainLayout } from "@/layouts";
 
 /* */
 import { ForgotPassword, Login, Otp, SignUp } from "@/pages/Authentication";
 import { PasswordUpdateSuccess } from "@/components/Authentication/PasswordUpdate";
 
 /* */
-import { Dashboard, Settings, Notifications } from "@/pages/Main";
 
 const TaskPilotRoute = createBrowserRouter(
   /* All Paths */
@@ -18,15 +18,19 @@ const TaskPilotRoute = createBrowserRouter(
           children: [
             {
               index: true,
-              element: <Dashboard />,
+              element: "home",
             },
             {
-              path: "settings",
-              element: <Settings />,
+              path: "contactus",
+              element: "contactus",
             },
             {
-              path: "notifications",
-              element: <Notifications />,
+              path: "aboutus",
+              element: "aboutus",
+            },
+            {
+              path: "blog-upload",
+              element: "blog-upload",
             },
           ],
         },

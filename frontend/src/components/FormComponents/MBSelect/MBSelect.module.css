@@ -1,6 +1,5 @@
-.errorMessage,
-.label {
-  composes: label from "../HMInput/HMInput.module.css";
+.errorMessage,.label {
+  composes: label from "../MBInput/MBInput.module.css";
 }
 
 .parent {
@@ -17,9 +16,7 @@
   height: 40px;
 }
 
-.select:global.ant-select:not(.ant-select-disabled):not(
-    .ant-select-customize-input
-  ):not(.ant-pagination-size-changer)
+.select:global.ant-select:not(.ant-select-disabled):not(.ant-select-customize-input):not(.ant-pagination-size-changer)
   .ant-select-selector {
   box-shadow: none;
   padding-right: 65px;

@@ -1,8 +1,7 @@
-import clsx from "clsx";
-import { Radio  } from "antd";
-import styles from "./HMRadioButton.module.css";
+import clsx from "clsx";import { Radio } from "antd";
+import styles from "./MBRadioButton.module.css";
 
-export const HMRadioButton = ({
+export const MBRadioButton = ({
   id,
   name,
   label,
@@ -33,9 +32,7 @@ export const HMRadioButton = ({
         name={name}
         {...rest}
       />
-      {errorMessage && (
-        <div className={clsx(styles.errorMessage)}>{errorMessage}</div>
-      )}
+      {errorMessage && <div className={clsx(styles.errorMessage)}>{errorMessage}</div>}
     </div>
   );
 };
