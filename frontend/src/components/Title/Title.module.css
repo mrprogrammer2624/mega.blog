@@ -1,0 +1,6 @@
+.leftLine {
+  width: 4px;
+  height: 12px;
+  border-radius: var(--space-lg);
+  margin-right: var(--space-md);
+}
